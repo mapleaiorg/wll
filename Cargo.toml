@@ -65,7 +65,7 @@ async-trait = "0.1"
 # HTTP / Server
 axum = "0.7"
 hyper = { version = "1", features = ["http2", "server", "client"] }
-tower = "0.4"
+tower = { version = "0.5", features = ["util"] }
 tower-http = { version = "0.5", features = ["trace", "cors"] }
 
 # CLI
