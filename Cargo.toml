@@ -1,0 +1,114 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/wll-types",
+    "crates/wll-crypto",
+    "crates/wll-store",
+    "crates/wll-dag",
+    "crates/wll-ledger",
+    "crates/wll-fabric",
+    "crates/wll-gate",
+    "crates/wll-refs",
+    "crates/wll-index",
+    "crates/wll-diff",
+    "crates/wll-merge",
+    "crates/wll-pack",
+    "crates/wll-sync",
+    "crates/wll-protocol",
+    "crates/wll-server",
+    "crates/wll-cli",
+    "crates/wll-sdk",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["MapleAI <dev@mapleai.org>"]
+license = "Apache-2.0"
+repository = "https://github.com/mapleaiorg/wll"
+rust-version = "1.80"
+
+[workspace.dependencies]
+# Internal crates
+wll-types = { path = "crates/wll-types" }
+wll-crypto = { path = "crates/wll-crypto" }
+wll-store = { path = "crates/wll-store" }
+wll-dag = { path = "crates/wll-dag" }
+wll-ledger = { path = "crates/wll-ledger" }
+wll-fabric = { path = "crates/wll-fabric" }
+wll-gate = { path = "crates/wll-gate" }
+wll-refs = { path = "crates/wll-refs" }
+wll-index = { path = "crates/wll-index" }
+wll-diff = { path = "crates/wll-diff" }
+wll-merge = { path = "crates/wll-merge" }
+wll-pack = { path = "crates/wll-pack" }
+wll-sync = { path = "crates/wll-sync" }
+wll-protocol = { path = "crates/wll-protocol" }
+wll-server = { path = "crates/wll-server" }
+wll-cli = { path = "crates/wll-cli" }
+wll-sdk = { path = "crates/wll-sdk" }
+
+# Cryptography
+blake3 = "1"
+ed25519-dalek = { version = "2", features = ["serde", "rand_core"] }
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+bincode = "1"
+toml = "0.8"
+
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+async-trait = "0.1"
+
+# HTTP / Server
+axum = "0.7"
+hyper = { version = "1", features = ["http2", "server", "client"] }
+tower = "0.4"
+tower-http = { version = "0.5", features = ["trace", "cors"] }
+
+# CLI
+clap = { version = "4", features = ["derive"] }
+colored = "2"
+
+# Utilities
+uuid = { version = "1", features = ["v7", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+rand = "0.8"
+bytes = "1"
+hex = "0.4"
+
+# Compression / Storage
+zstd = "0.13"
+memmap2 = "0.9"
+crc32fast = "1"
+tempfile = "3"
+
+# Diffing
+similar = "2"
+
+# File system
+walkdir = "2"
+ignore = "0.4"
+
+# Error handling
+thiserror = "2"
+anyhow = "1"
+
+# Observability
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+# Testing
+proptest = "1"
+criterion = { version = "0.5", features = ["html_reports"] }
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = "symbols"
+
+[profile.dev]
+opt-level = 0
+debug = true

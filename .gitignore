@@ -1,0 +1,24 @@
+# Build
+/target/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# Generative prompts (not checked in)
+.prompt/
+
+# Test artifacts
+*.profraw
+lcov.info

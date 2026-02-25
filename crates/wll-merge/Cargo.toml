@@ -1,0 +1,19 @@
+[package]
+name = "wll-merge"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Merge engine for the WorldLine Ledger: three-way merge, conflict resolution, and branch unification"
+
+[dependencies]
+wll-types = { workspace = true }
+wll-crypto = { workspace = true }
+wll-store = { workspace = true }
+wll-dag = { workspace = true }
+wll-diff = { workspace = true }
+serde = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }

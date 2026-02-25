@@ -1,0 +1,23 @@
+[package]
+name = "wll-sync"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Synchronization engine for the WorldLine Ledger: fetch, push, and negotiation between peers"
+
+[dependencies]
+wll-types = { workspace = true }
+wll-crypto = { workspace = true }
+wll-store = { workspace = true }
+wll-ledger = { workspace = true }
+wll-refs = { workspace = true }
+wll-pack = { workspace = true }
+wll-dag = { workspace = true }
+async-trait = { workspace = true }
+tokio = { workspace = true }
+serde = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }

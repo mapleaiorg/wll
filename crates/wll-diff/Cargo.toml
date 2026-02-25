@@ -1,0 +1,17 @@
+[package]
+name = "wll-diff"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Diff engine for the WorldLine Ledger: content comparison and change set generation"
+
+[dependencies]
+wll-types = { workspace = true }
+wll-store = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+similar = { workspace = true }
+thiserror = { workspace = true }

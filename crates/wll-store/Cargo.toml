@@ -1,0 +1,20 @@
+[package]
+name = "wll-store"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Content-addressed object storage backend for the WorldLine Ledger"
+
+[dependencies]
+wll-types = { workspace = true }
+wll-crypto = { workspace = true }
+serde = { workspace = true }
+bincode = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+tempfile = { workspace = true }

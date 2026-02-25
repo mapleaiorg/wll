@@ -1,0 +1,20 @@
+[package]
+name = "wll-ledger"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Core ledger logic for the WorldLine Ledger: commits, branches, and history management"
+
+[dependencies]
+wll-types = { workspace = true }
+wll-crypto = { workspace = true }
+wll-store = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+bincode = { workspace = true }
+blake3 = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }

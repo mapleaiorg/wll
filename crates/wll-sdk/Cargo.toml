@@ -1,0 +1,32 @@
+[package]
+name = "wll-sdk"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "High-level SDK for the WorldLine Ledger: unified API for programmatic access to all WLL subsystems"
+
+[dependencies]
+wll-types = { workspace = true }
+wll-crypto = { workspace = true }
+wll-store = { workspace = true }
+wll-dag = { workspace = true }
+wll-ledger = { workspace = true }
+wll-fabric = { workspace = true }
+wll-gate = { workspace = true }
+wll-refs = { workspace = true }
+wll-index = { workspace = true }
+wll-diff = { workspace = true }
+wll-merge = { workspace = true }
+wll-pack = { workspace = true }
+wll-sync = { workspace = true }
+wll-protocol = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+hex = { workspace = true }
+blake3 = { workspace = true }

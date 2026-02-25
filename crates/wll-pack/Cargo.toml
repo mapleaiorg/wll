@@ -1,0 +1,25 @@
+[package]
+name = "wll-pack"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Pack file format for the WorldLine Ledger: delta compression, indexing, and efficient object transfer"
+
+[dependencies]
+wll-types = { workspace = true }
+wll-crypto = { workspace = true }
+wll-store = { workspace = true }
+serde = { workspace = true }
+bincode = { workspace = true }
+blake3 = { workspace = true }
+crc32fast = { workspace = true }
+zstd = { workspace = true }
+memmap2 = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }
