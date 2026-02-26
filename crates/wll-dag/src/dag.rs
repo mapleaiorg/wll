@@ -359,7 +359,7 @@ impl ProvenanceDag {
         let mut in_degree: HashMap<ObjectId, usize> = HashMap::new();
         for node in self.nodes.values() {
             in_degree.entry(node.id).or_insert(0);
-            for parent_ref in &node.parents {
+            for _parent_ref in &node.parents {
                 // Each child edge from parent -> node increases node's in-degree
                 // from the perspective of "parent edges are the forward direction".
                 // Actually, in our DAG parents point backward, so we need:

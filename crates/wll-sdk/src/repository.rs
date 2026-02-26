@@ -4,7 +4,7 @@ use serde_json::Value;
 use wll_types::{
     CommitmentId, IdentityMaterial, ObjectId, WorldlineId,
 };
-use wll_store::{Blob, InMemoryObjectStore, ObjectStore, StoredObject, Tree, TreeEntry};
+use wll_store::{Blob, InMemoryObjectStore, ObjectStore, Tree, TreeEntry};
 use wll_ledger::{
     CommitmentProposal, Decision, EvidenceBundle, InMemoryLedger, LedgerReader, LedgerWriter,
     OutcomeRecord, Receipt, ReplayEngine, ReplayResult, LatestStateProjection,

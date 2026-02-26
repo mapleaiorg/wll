@@ -48,8 +48,8 @@ impl SyncVerifier {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use std::collections::BTreeMap;
-    use wll_ledger::{CommitmentReceipt, OutcomeReceipt};
+    
+    use wll_ledger::CommitmentReceipt;
     use wll_types::{CommitmentClass, CommitmentId, TemporalAnchor};
     use wll_types::commitment::Decision;
     use wll_types::evidence::EvidenceBundle;

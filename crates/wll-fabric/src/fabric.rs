@@ -6,7 +6,7 @@ use tracing::{debug, info};
 
 use wll_types::{TemporalAnchor, WorldlineId};
 
-use crate::error::{FabricError, Result};
+use crate::error::Result;
 use crate::event::{EventKind, EventPayload, FabricEvent};
 use crate::hlc::HybridLogicalClock;
 use crate::wal::{WalConfig, WalEntry, WriteAheadLog};

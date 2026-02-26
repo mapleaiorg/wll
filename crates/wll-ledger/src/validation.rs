@@ -3,7 +3,7 @@ use std::collections::HashSet;
 use wll_types::WorldlineId;
 
 use crate::error::LedgerError;
-use crate::records::{Receipt, ReceiptKind};
+use crate::records::Receipt;
 use crate::traits::LedgerReader;
 
 /// Result of stream validation.
@@ -176,7 +176,7 @@ mod tests {
 
     use crate::memory::InMemoryLedger;
     use crate::records::*;
-    use crate::traits::{LedgerReader, LedgerWriter};
+    use crate::traits::LedgerWriter;
 
     use super::*;
 
